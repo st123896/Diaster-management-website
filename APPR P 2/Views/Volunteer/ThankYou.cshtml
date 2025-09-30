@@ -1,0 +1,193 @@
+﻿@{
+    ViewBag.Title = "Thank You for Volunteering";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <!-- Success Icon -->
+            <div class="mb-4">
+                <div class="success-icon bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                     style="width: 100px; height: 100px;">
+                    <i class="fas fa-check fa-3x text-white"></i>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <h1 class="display-4 fw-bold text-success mb-3">Thank You for Volunteering!</h1>
+            <p class="lead mb-4">Your application has been received successfully. We appreciate your willingness to help communities in need.</p>
+
+            <!-- Application Details -->
+            <div class="card border-success mb-5">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="fas fa-clipboard-check me-2"></i>Application Received</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-start">
+                        <div class="col-md-6">
+                            <p><strong>Application ID:</strong> <span class="text-muted">VOL-@ViewBag.VolunteerId.ToString().ToUpper().Substring(0, 8)</span></p>
+                            <p><strong>Submission Date:</strong> <span class="text-muted">@DateTime.Now.ToString("MMM dd, yyyy")</span></p>
+                            <p><strong>Status:</strong> <span class="badge bg-warning">Under Review</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Expected Response:</strong> <span class="text-muted">Within 2-3 business days</span></p>
+                            <p><strong>Contact Email:</strong> <span class="text-muted">volunteers@disasterallowance.org</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4">What Happens Next?</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="text-primary mb-3">
+                                        <i class="fas fa-search fa-2x"></i>
+                                    </div>
+                                    <h5>Application Review</h5>
+                                    <p class="text-muted">Our team will review your application and skills to match you with suitable opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="text-primary mb-3">
+                                        <i class="fas fa-phone fa-2x"></i>
+                                    </div>
+                                    <h5>Interview & Screening</h5>
+                                    <p class="text-muted">We may contact you for a brief interview to discuss your availability and preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="text-primary mb-3">
+                                        <i class="fas fa-tasks fa-2x"></i>
+                                    </div>
+                                    <h5>Assignment</h5>
+                                    <p class="text-muted">Once approved, you'll be assigned to projects based on your skills and availability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Information -->
+            <div class="alert alert-info mb-5">
+                <h5><i class="fas fa-info-circle me-2"></i>Important Information</h5>
+                <ul class="mb-0">
+                    <li>Please check your email regularly for updates on your application status</li>
+                    <li>Ensure your contact information is up to date</li>
+                    <li>Be prepared to provide any additional documentation if requested</li>
+                    <li>Emergency response volunteers may be required to complete additional training</li>
+                </ul>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <a href="@Url.Action("Index", "Volunteer")" class="btn btn-outline-primary w-100">
+                        <i class="fas fa-plus-circle me-2"></i>Apply for Another Role
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-primary w-100">
+                        <i class="fas fa-home me-2"></i>Return to Homepage
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mt-5 pt-4 border-top">
+                <h4 class="mb-3">Quick Links</h4>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary btn-sm w-100">
+                            <i class="fas fa-exclamation-triangle me-1"></i>Report Incident
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="@Url.Action("Donate", "Donation")" class="btn btn-outline-secondary btn-sm w-100">
+                            <i class="fas fa-donate me-1"></i>Make a Donation
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="@Url.Action("About", "Home")" class="btn btn-outline-secondary btn-sm w-100">
+                            <i class="fas fa-info-circle me-1"></i>About Our Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="mt-4">
+                <p class="text-muted">
+                    Need immediate assistance? Contact our volunteer coordinator at
+                    <a href="mailto:volunteers@disasterallowance.org">volunteers@disasterallowance.org</a>
+                    or call <strong>+27 10 555 7890</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .success-icon {
+        box-shadow: 0 0 20px rgba(40, 167, 69, 0.3);
+    }
+
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+</style>
+
+@section scripts {
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to success icon
+            const successIcon = document.querySelector('.success-icon');
+            if (successIcon) {
+                successIcon.style.transform = 'scale(0)';
+                setTimeout(() => {
+                    successIcon.style.transition = 'transform 0.5s ease-out';
+                    successIcon.style.transform = 'scale(1)';
+                }, 100);
+            }
+
+            // Print functionality
+            const printButton = document.getElementById('printButton');
+            if (printButton) {
+                printButton.addEventListener('click', function() {
+                    window.print();
+                });
+            }
+        });
+
+        // Optional: Add a confetti effect for celebration
+        function celebrate() {
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+        }
+
+        // Trigger celebration on page load
+        window.addEventListener('load', celebrate);
+    </script>
+}
