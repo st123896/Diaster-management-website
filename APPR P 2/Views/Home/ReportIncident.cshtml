@@ -1,0 +1,93 @@
+﻿@model APPR_P_2.Models.IncidentReportViewModel
+@{
+    ViewBag.Title = "Report Incident";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="form-section">
+                <h3 class="mb-4"><i class="fas fa-exclamation-triangle me-2"></i>Report a Disaster Incident</h3>
+
+                @using (Html.BeginForm("ReportIncident", "Home", FormMethod.Post, new { @class = "needs-validation", novalidate = "true" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "validation-summary-errors" })
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.IncidentType, new { @class = "form-label" })
+                        @Html.DropDownListFor(m => m.IncidentType, new SelectList(ViewBag.IncidentTypes, "Value", "Text"),
+                        "Select Incident Type", new { @class = "form-select" })
+                    @Html.ValidationMessageFor(m => m.IncidentType)
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Title, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = "Brief title of the incident" })
+                    @Html.ValidationMessageFor(m => m.Title)
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Description, new { @class = "form-label" })
+                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = "4", placeholder = "Detailed description of the incident" })
+                    @Html.ValidationMessageFor(m => m.Description)
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        @Html.LabelFor(m => m.Location, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Location, new { @class = "form-control", placeholder = "City, State, Country" })
+                        @Html.ValidationMessageFor(m => m.Location)
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        @Html.LabelFor(m => m.Severity, new { @class = "form-label" })
+                        @Html.DropDownListFor(m => m.Severity, new SelectList(ViewBag.SeverityLevels, "Value", "Text"),
+                                                "Select Severity Level", new { @class = "form-select" })
+                        @Html.ValidationMessageFor(m => m.Severity)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        @Html.LabelFor(m => m.ReportedDate, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ReportedDate, new { @class = "form-control", type = "date" })
+                        @Html.ValidationMessageFor(m => m.ReportedDate)
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        @Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Your contact number" })
+                        @Html.ValidationMessageFor(m => m.PhoneNumber)
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit Report</button>
+                                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        // Client-side validation
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+}

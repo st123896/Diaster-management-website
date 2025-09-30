@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Providing Relief in Times of Crisis</h1>
+        <p class="lead">Join us in our mission to support communities affected by natural disasters and emergencies</p>
+        <div class="mt-4">
+            <a href="@Url.Action("Donate", "Home")" class="btn btn-primary btn-lg me-2"><i class="fas fa-hand-holding-heart me-2"></i>Make a Donation</a>
+            <a href="@Url.Action("Volunteer", "Home")" class="btn btn-outline-light btn-lg"><i class="fas fa-hands-helping me-2"></i>Volunteer Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Stats Section -->
+    <div class="row mb-5">
+        <div class="col-md-3">
+            <div class="stats-box">
+                <div class="stats-number">2,458</div>
+                <div class="stats-label">Donations Received</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                <div class="stats-number">127</div>
+                <div class="stats-label">Active Incidents</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                <div class="stats-number">888</div>
+                <div class="stats-label">Volunteers Registered</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                <div class="stats-number">R444 K</div>
+                <div class="stats-label">Funds Raised</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card feature-box">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Report an Incident</h3>
+                    <p>Notify us about a disaster or emergency situation in your area that requires immediate attention and resources.</p>
+                    <a href="@Url.Action("ReportIncident", "Home")" class="btn btn-outline-primary">Report Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card feature-box">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fas fa-donate"></i>
+                    </div>
+                    <h3>Make a Donation</h3>
+                    <p>Support our relief efforts by making a financial contribution or donating essential supplies for affected communities.</p>
+                    <a href="@Url.Action("Donate", "Home")" class="btn btn-outline-primary">Donate Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card feature-box">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Become a Volunteer</h3>
+                    <p>Join our network of volunteers to provide hands-on assistance in disaster-affected areas.</p>
+                    <a href="@Url.Action("Volunteer", "Home")" class="btn btn-outline-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incident Map -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="mb-4">Active Incidents Map</h2>
+            <div class="incident-map">
+                <i class="fas fa-map-marked-alt me-2"></i> Interactive Map of Active Disaster Incidents
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Incidents -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="mb-4">Recent Disaster Incidents</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Incident Type</th>
+                            <th>Location</th>
+                            <th>Reported On</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-fire me-2 text-danger"></i> Wildfire</td>
+                            <td>Northern Cape</td>
+                            <td>Mar 28, 2022</td>
+                            <td><span class="badge bg-danger">High</span></td>
+                            <td><span class="badge bg-warning">Ongoing</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-water me-2 text-info"></i> Flooding</td>
+                            <td>Kwa-Zulu Natal</td>
+                            <td>Aug 25, 2021</td>
+                            <td><span class="badge bg-warning">Medium</span></td>
+                            <td><span class="badge bg-success">Contained</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-wind me-2 text-info"></i> Hurricane</td>
+                            <td>KZN</td>
+                            <td>Aug 22, 2023</td>
+                            <td><span class="badge bg-danger">High</span></td>
+                            <td><span class="badge bg-warning">Ongoing</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-house-damage me-2 text-secondary"></i> Earthquake</td>
+                            <td>Gauteng</td>
+                            <td>Jul 18, 2023</td>
+                            <td><span class="badge bg-danger">High</span></td>
+                            <td><span class="badge bg-success">Stabilized</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
