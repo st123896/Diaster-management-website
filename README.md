@@ -1,17 +1,19 @@
-Disaster Allowance Foundation - ASP.NET MVC Prototype
+#Disaster Allowance Foundation - ASP.NET MVC Prototype
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📋 Project Overview
 The Disaster Allowance Foundation is a comprehensive web application designed to facilitate disaster relief efforts through user management, incident reporting, donation processing, and volunteer coordination. This ASP.NET MVC prototype demonstrates the core functionality of a disaster response management system.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🚀 Features Implemented
 1. User Authentication System
 Secure Registration & Login: ASP.NET Identity-based authentication
-
+*******************************************************************************************************************************************************************************
 Role Management: Different user roles (Donor, Volunteer, Admin)
 
 Profile Management: User profile creation and management
 
 Email Confirmation: Basic email verification workflow
-
+*******************************************************************************************************************************************************************************
 2. Disaster Incident Reporting
 Incident Submission: Categorized disaster type reporting
 
@@ -20,7 +22,7 @@ Interactive Map: Visual representation of active incidents
 Real-time Tracking: Status updates and severity indicators
 
 Form Validation: Client and server-side validation
-
+*******************************************************************************************************************************************************************************
 3. Donation Management System
 Multiple Donation Types: Financial, supplies, or combined donations
 
@@ -29,7 +31,7 @@ Payment Integration: Support for multiple payment methods
 Impact Tracking: Statistics and progress visualization
 
 Anonymous Donations: Option for anonymous contributions
-
+*******************************************************************************************************************************************************************************
 4. Volunteer Coordination
 Volunteer Registration: Skills-based registration system
 
@@ -39,30 +41,34 @@ Urgency Indicators: Priority-based task assignment
 
 Availability Tracking: Flexible scheduling system
 
+
+*******************************************************************************************************************************************************************************
 🛠 Technology Stack
 Backend
 Framework: ASP.NET MVC 5 / ASP.NET Core MVC
+#
 
 Authentication: ASP.NET Identity
 
+#
 Database: Entity Framework with SQL Server
-
+#
 Validation: Data Annotations & Fluent Validation
-
+#
 Frontend
 UI Framework: Bootstrap 5.3.0
-
+#
 Icons: Font Awesome 6.4.0
-
+#
 Maps: Leaflet.js for interactive mapping
-
+#
 JavaScript: jQuery for dynamic interactions
-
+#
 Development Tools
 Version Control: Git with Azure DevOps
-
+#
 CI/CD: Azure Pipelines
-
+#
 Project Management: Azure Boards
 
 📁 Project Structure
@@ -96,52 +102,54 @@ APPR_P_2/
 │   └── Site.css
 └── Scripts/
     └── Custom/
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🗄 Database Schema
 Core Tables
 Users: User accounts and authentication
-
+#
 Donations: Financial and supply donation records
-
+#
 IncidentReports: Disaster incident tracking
-
+#
 Volunteers: Volunteer profiles and skills
-
+#
 InventoryItems: Supply catalog management
-
+#
 ReliefProjects: Disaster relief project coordination
-
+#
 Key Relationships
 One-to-Many: Users → Donations
-
+#
 One-to-Many: Users → IncidentReports
-
+#
 Many-to-Many: Volunteers → Skills
-
+#
 Many-to-Many: ReliefProjects → InventoryItems
-
+#
 🚀 Getting Started
 Prerequisites
 .NET Framework 4.8 or .NET 6+
-
+#
 SQL Server 2016+
-
+#
 Visual Studio 2022+
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Git
-
+#
 Installation Steps
 Clone the Repository
-
+*******************************************************************************************************************************************************************************
 bash
 git clone https://dev.azure.com/your-organization/DisasterAllowanceFoundation/_git/DisasterAllowanceFoundation
 cd APPR_P_2
+*******************************************************************************************************************************************************************************
 Database Setup
 
 sql
 -- Run initial migration or database script
 Update-Database
 Configuration
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Update connection strings in Web.config
 
 Configure email settings for notifications
