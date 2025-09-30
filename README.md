@@ -133,7 +133,24 @@ APPR_P_2/
 git clone https://dev.azure.com/your-organization/DisasterAllowanceFoundation/_git/DisasterAllowanceFoundation
 cd APPR_P_2
 
-*https://github.com/st123896/Diaster-management-website.git
+## Clone github resitory
+https://github.com/st123896/Diaster-management-website.git
+
+# Create Gitflow branches
+git checkout -b develop
+git push -u origin develop
+
+git checkout -b feature/user-auth
+git push -u origin feature/user-auth
+
+git checkout -b feature/incident-reporting
+git push -u origin feature/incident-reporting
+
+git checkout -b feature/donation-system
+git push -u origin feature/donation-system
+
+git checkout -b feature/volunteer-management
+git push -u origin feature/volunteer-management
 ```
 
 **Database Setup**
@@ -297,14 +314,6 @@ dotnet test
 
 ---
 
-## 🙏 Acknowledgments
-
-* **Bootstrap** team for responsive UI
-* **Font Awesome** for icon set
-* **Leaflet.js** for interactive maps
-* **ASP.NET community** for best practices & guidance
-
----
 
 ⚠️ **Note**: This is a prototype implementation. For production deployment, add further **security hardening**, **error handling**, and **performance optimizations**.
 
