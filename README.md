@@ -132,6 +132,8 @@ APPR_P_2/
 # Clone repository
 git clone https://dev.azure.com/your-organization/DisasterAllowanceFoundation/_git/DisasterAllowanceFoundation
 cd APPR_P_2
+
+*https://github.com/st123896/Diaster-management-website.git
 ```
 
 **Database Setup**
