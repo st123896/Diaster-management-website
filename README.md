@@ -300,6 +300,38 @@ dotnet test
    ```
 5. Open Pull Request
 
+## 🔄 DevOps & CI/CD
+
+### Repository Structure
+- **Main Branch**: Production-ready code
+- **Develop Branch**: Integration branch for features
+- **Feature Branches**: Individual feature development
+- **Release Branches**: Release preparation
+- **Hotfix Branches**: Emergency production fixes
+
+### Build Pipeline
+The Azure DevOps pipeline automatically:
+- Builds the solution on every push to `develop` and `main`
+- Runs unit tests
+- Publishes artifacts
+- Deploys to test environment on successful builds
+
+### Quality Gates
+- ✅ Code review required for all pull requests
+- ✅ Build must pass before merge
+- ✅ Work items must be linked to commits
+- ✅ Unit tests must pass
+
+### Deployment Environments
+- **Test**: Automatic deployment from `develop` branch
+- **Staging**: Manual deployment from `release/*` branches
+- **Production**: Manual deployment from `main` branch
+
+### Monitoring
+- Build status badges in README
+- Email notifications on failure
+- Deployment history tracking
+- 
 ### Code Standards
 
 * Follow ASP.NET MVC best practices
