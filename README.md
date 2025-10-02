@@ -290,11 +290,16 @@ dotnet test
 * CDN for static resources
 
 ---
-###Demo Credentials
-*Role	**Email	**Password
-*Admin	**admin@disaster.org	**Admin123!
-*Donor	**donor@example.com 	**Donor123!
-*Volunteer	**volunteer@example.com	**Volunteer123!
+# Demo Credentials
+
+| Role      | Email                   | Password        |
+| --------- | ----------------------- | --------------- |
+| Admin     | `admin@disaster.org`    | `Admin123!`     |
+| Donor     | `donor@example.com`     | `Donor123!`     |
+| Volunteer | `volunteer@example.com` | `Volunteer123!` |
+
+> These demo credentials are for testing only. Do not use them in production.
+
 
 
 ---
