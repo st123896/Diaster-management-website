@@ -367,7 +367,7 @@ The Azure DevOps pipeline automatically:
 ---
 
 ###Author 
-*Tshepiso Mokhine
+- Tshepiso Mokhine
 
 ---
 
